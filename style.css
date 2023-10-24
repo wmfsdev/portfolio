@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box;   */
+}
+
+body {
+  background-color: rgb(104, 89, 89);
+  min-height: 100vh;
+  overflow-x:hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  z-index: 1;
+  justify-content: space-between;
+  display: flex;
+  animation: slide-in-left 1s cubic-bezier(0.175, 0.885, 0.320, 1.06) both; 
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+ul {
+  font-family: 'Dosis', sans-serif;
+  list-style-type: none;
+  position:absolute;
+  font-size: 2.5rem;
+  top: 0px;
+  left: 0px;
+  margin-left: 5px;
+  margin-top: 5px;
+  
+}
+
+nav ul > li {
+  display: none; 
+  color: white;
+ 
+}
+
+nav:hover ul li {
+
+  background-color: rgb(33, 32, 34);
+  display: block;
+  color: white;
+  animation: expand 500ms ease-in;
+}
+
+li {
+  padding: 30px;
+  padding-right: 50px;
+  border-right: 0.1rem solid white; 
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: white
+}
+
+a:hover {
+  color:rgb(178, 130, 130)
+  
+}
+
+li:nth-child(1) {
+  padding-top: 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+li:nth-child(4)  {
+  padding-bottom: 60px;
+  border-bottom: 0.05rem solid white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+nav {
+  margin: 10px;
+  margin-left: 40px;
+}
+
+.menu { 
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 2px;
+  height: 75px;
+  width: 50px;
+  background-color: aliceblue;
+  animation: rotate-center 0.8s ease-in-out forwards;
+  animation-delay: 0.5s;
+  border-style: none;
+}
+
+.menu div {
+  width: 20%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+main {
+  animation: slide-in-top 1s ease-in-out both;
+  background-color: rgb(133, 79, 79);
+  flex: 1;
+}
+
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateX(100%);
+    
+  }
+  100% {
+    transform: translateX(0);
+   
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translate(-200px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translate(0px);
+    opacity: 1
+  }
+}
+
+
+@keyframes open-menu { 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-90deg);
+    
+  }
+}
+
+@keyframes close-menu { 
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  60% {
+    transform: rotate(30deg);
+  }
+
+  90% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+    
+  }
+}
+
+.menu-dark {
+  background-color: black;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  margin: 0px;
+  font-weight: 200;
+}
+
+
+@media (max-width: 400px) {
+  
+  .menu {
+    height: 45px;
+    width: 35px;
+    animation-delay: 0s;
+  }
+
+  nav {
+    margin-left: 20px;
+  }
+
+  ul {
+    
+    font-size: 2rem;
+  }
+
+  h1 { 
+   
+    font-size: 3.5rem;
+    font-weight: 200;
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(450deg);
+    opacity: 1
+  }
+}
+
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX();
+    opacity: 1;
+  }
+}
