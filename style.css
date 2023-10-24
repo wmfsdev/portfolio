@@ -70,6 +70,11 @@ a:link, a:visited {
   color: white
 }
 
+.not-active {
+  pointer-events: none;
+  touch-action: none;
+}
+
 a:hover {
   color:rgb(178, 130, 130)
   
@@ -213,7 +218,7 @@ h1 {
 @keyframes rotate-center {
   0% {
     transform: rotate(0);
-    opacity: 0.5;
+    opacity: 1;
   }
 
   100% {

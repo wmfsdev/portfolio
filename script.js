@@ -1,16 +1,29 @@
 
-const menuIcon = document.querySelector('.menu')
-menuIcon.addEventListener("mouseenter", (e) => {
-  e.preventDefault
-  console.log("open")
-  menuIcon.style.animation = "open-menu 0.35s ease-in forwards"
+const menuIcon = document.querySelector('nav')
+const list = document.querySelector('nav ul li')
+
+menuIcon.addEventListener("mouseenter", () => {
+ list.classList.add('not-active')
+ setTimeout(() => {
+   list.classList.remove('not-active')
+ }, 300);
+//  
+
 })
 
-const menu = document.querySelector('nav ul')
-menu.addEventListener("mouseleave", () => {
-  console.log("close")
-  menuIcon.style.animation = "close-menu 0.35s ease-in none"
-})
+// menuIcon.addEventListener("mouseenter", (e) => {
+//   setTimeout(() => {
+//   }, 500);
+
+//   console.log("open")
+//   menuIcon.style.animation = "open-menu 0.35s ease-in forwards"
+// })
+
+// const menu = document.querySelector('nav ul')
+// menu.addEventListener("mouseleave", () => {
+//   console.log("close")
+//   menuIcon.style.animation = "close-menu 0.35s ease-in none"
+// })
 
 // const header = document.querySelector('header')
 // header.addEventListener("mouseover", () => {
