@@ -1,14 +1,13 @@
 
 const menuIcon = document.querySelector('nav')
 const list = document.querySelector('nav ul li')
+list.classList.add('not-active')
 
 menuIcon.addEventListener("mouseenter", () => {
- list.classList.add('not-active')
- setTimeout(() => {
-   list.classList.remove('not-active')
- }, 300);
-//  
-
+  
+  setTimeout(() => {
+    list.classList.remove('not-active')
+  }, 300);
 })
 
 // menuIcon.addEventListener("mouseenter", (e) => {
