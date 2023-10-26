@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -78,32 +79,35 @@ header {
   display: flex;
   gap: 30px;
   
+ 
 }
 
-.first-para-visible {
+#first-para-visible {
   z-index: 1;
   visibility: visible;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   background-color: rgb(245 84 46 / 57%);
   animation: rotate-scale-up 0.65s linear both;
+  scroll-behavior: smooth;
 }
 
-.second-para-visible {
+#second-para-visible {
   visibility: visible;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   background-color: rgb(47 197 159 / 65%);
   animation: roll-in-right 1s ease-out both;
   animation-delay: 3.5s;
+  
 }
 
 
-.first-para {
+#first-para {
   visibility: hidden;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   
 }
 
-.second-para {
+#second-para {
   visibility: hidden;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   

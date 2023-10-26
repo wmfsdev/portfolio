@@ -18,10 +18,17 @@ menuIcon.addEventListener("touchstart", () => {
 const about = document.querySelector('.animate-me')
 about.addEventListener("click", () => {
   
-  const firstPara = document.querySelector('.first-para')
-  const secondPara = document.querySelector('.second-para')
-  firstPara.classList.remove('first-para')
-  secondPara.classList.remove('second-para')
-  firstPara.classList.add('first-para-visible')
-  secondPara.classList.add('second-para-visible')
+  const firstPara = document.querySelector('#first-para')
+  const secondPara = document.querySelector('#second-para')
+  firstPara.removeAttribute('first-para')
+  secondPara.removeAttribute('second-para')
+  firstPara.setAttribute('id', 'first-para-visible')
+  secondPara.setAttribute('id', 'second-para-visible')
+})
+
+const paraLink = document.querySelector('.animate-me')
+
+paraLink.addEventListener("click", () => {
+  document.querySelector('#foot').scrollIntoView({ behavior: 'smooth' })
+
 })
