@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
 
@@ -30,14 +29,11 @@ header {
   padding-right: 30px;
   gap: 20px;
   background-color: rgb(51, 94, 113);
-
 }
-
 
 .about-me {
   padding-left: 20%;
   padding-right: 20%;
-  
   padding-top: 40px;
   padding-bottom: 50px;
   background-color: rgb(245, 245, 247);
@@ -82,15 +78,13 @@ header {
 .para-container {
   display: flex;
   gap: 30px;
-  
- 
 }
 
 
   
 #first-para-visible {
   z-index: 1;
-  visibility: visible;
+  display: block;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   background-color: rgb(245 84 46 / 57%);
   animation: rotate-scale-up-one 0.85s linear both;
@@ -98,7 +92,7 @@ header {
 
 #second-para-visible {
   
-  visibility: visible;
+  display: block;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   background-color: rgb(47 197 159 / 65%);
   animation: roll-in-blurred-left 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
@@ -107,15 +101,15 @@ header {
 
 
 #first-para {
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
-  
 }
 
 #second-para {
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
-  
 }
 
 @keyframes rotate-scale-up-one {
@@ -301,12 +295,12 @@ h1 {
   @keyframes roll-in-blurred-left {
     0% {
       transform: translateY(-1000px) rotate(-720deg) scale(0.7);
-      filter: blur(50px);
+      
       opacity: 0;
     }
     100% {
       transform: translateX(0) rotate(0deg) scale(1);
-      filter: blur(0);
+     
       opacity: 1;
     }
   }
