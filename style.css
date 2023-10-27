@@ -29,19 +29,31 @@ header {
   padding-right: 30px;
   gap: 20px;
   background-color: rgb(51, 94, 113);
+  background-image: url('images/dots.jpg');
+  background-position: center;
+}
+
+footer {
+  z-index: 1;
+  min-height: 10vh;
+  background-color: rgb(51, 94, 113);
+  background-image: url(images/dots.jpg);
+    background-position: center;
 }
 
 .about-me {
+  box-sizing: border-box;
   padding-left: 20%;
   padding-right: 20%;
-  padding-top: 40px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: rgb(245, 245, 247);
   position: relative;
   animation:  1s cubic-bezier(0.175, 0.885, 0.320, 1.06) both slide-in-right; 
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
   flex-direction: column;
+  align-items: center;
 }
 
 .para-container p {
@@ -58,6 +70,7 @@ header {
   cursor: pointer;
   color: rgb(241, 239, 91);
 }
+
 
 @keyframes tracking-in-contract {
   0% {
@@ -78,9 +91,8 @@ header {
 .para-container {
   display: flex;
   gap: 30px;
+  
 }
-
-
   
 #first-para-visible {
   z-index: 1;
@@ -91,7 +103,6 @@ header {
 }
 
 #second-para-visible {
-  
   display: block;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   background-color: rgb(47 197 159 / 65%);
@@ -99,16 +110,13 @@ header {
   animation-delay: 3.5s;
 }
 
-
 #first-para {
   display: none;
-  /* visibility: hidden; */
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
 }
 
 #second-para {
   display: none;
-  /* visibility: hidden; */
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
 }
 
@@ -150,7 +158,6 @@ header {
   }
 }
 
-
 .work {
   z-index: 1;
   height: 500px;
@@ -169,6 +176,7 @@ header {
 }
 
 h2 {
+  width: 100%;
   position: relative;
   z-index: 1;
   color: rgb(242, 235, 235);
@@ -177,9 +185,12 @@ h2 {
   font-size: 3rem;
   text-align: center;
   border-radius: 10px;
-  background-color: rgb(49 110 137 / 74%);
-  padding: 30px;
+  background-color: rgb(49 110 137 / 84%);
+  padding-top: 30px;
+  padding-bottom: 40px;
   filter: drop-shadow(10px 10px rgb(201, 185, 188));
+  /* background-image: url('images/dots.jpg');
+  background-position: center; */
 }
 
 ul {
@@ -203,7 +214,6 @@ nav:hover ul li {
   display: block;
   color: white;
   animation: expand 500ms ease-in;
- 
 }
 
 li {
@@ -259,22 +269,19 @@ nav {
 }
 
 img {
-  object-fit: contain;
-  width: 100%;
-  display:block;
+  object-fit: scale-down;
+  object-position: center;
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
 }
 
 main {
   z-index: 1;
   animation: slide-in-top 1s ease-in-out both;
-  background-color: rgb(245, 245, 247);
-  flex: 1;
-}
-
-footer {
-  z-index: 1;
-  min-height: 20vh;
-  background-color: blanchedalmond;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
 }
 
 .menu-dark {
@@ -290,17 +297,15 @@ h1 {
   padding-bottom: 20px;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 900px) {
 
   @keyframes roll-in-blurred-left {
     0% {
       transform: translateY(-1000px) rotate(-720deg) scale(0.7);
-      
       opacity: 0;
     }
     100% {
       transform: translateX(0) rotate(0deg) scale(1);
-     
       opacity: 1;
     }
   }
@@ -312,25 +317,25 @@ h1 {
   }
 
   .about-me {
-    padding-top: 15px;;
-    padding-left: 35px;
-    padding-right: 35px;
+    
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 25px;
+  }
+
+  img {
+    object-fit: contain;
+    width: 100%;
   }
 
   h2 {
     font-size: 2rem;
-  
-  }
-
-  .shape-right {
-    display: none;
-    height: 0px;
-    width: 0px;
-    
+    background-size: contain;
+    padding: 25px;
   }
 
   .about-me p {
-    
+    width: 100%;
     font-size: 1.65rem;
     padding: 20px;
   }
@@ -338,6 +343,8 @@ h1 {
   .para-container {
     flex-direction: column;
     gap: 25px;
+    align-items: center;
+    
   }
 
 
