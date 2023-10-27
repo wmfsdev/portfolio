@@ -86,6 +86,8 @@ header {
  
 }
 
+
+  
 #first-para-visible {
   z-index: 1;
   visibility: visible;
