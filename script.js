@@ -15,20 +15,35 @@ menuIcon.addEventListener("touchstart", () => {
     }, 300);
 })
 
+
 const about = document.querySelector('.animate-me')
-about.addEventListener("click", () => {
-  
-  const firstPara = document.querySelector('#first-para')
-  const secondPara = document.querySelector('#second-para')
-  firstPara.removeAttribute('first-para')
-  secondPara.removeAttribute('second-para')
-  firstPara.setAttribute('id', 'first-para-visible')
-  secondPara.setAttribute('id', 'second-para-visible')
+
+if (window.screen.width < 420) {
+  about.addEventListener("touchstart", () => {
+    const firstPara = document.querySelector('#first-para')
+    const secondPara = document.querySelector('#second-para')
+    firstPara.removeAttribute('first-para')
+    secondPara.removeAttribute('second-para')
+    firstPara.setAttribute('id', 'first-para-visible')
+    secondPara.setAttribute('id', 'second-para-visible')    
+})
+} else {
+
+  about.addEventListener("click", () => { 
+     console.log("desktop")
+    const firstPara = document.querySelector('#first-para')
+    const secondPara = document.querySelector('#second-para')
+    firstPara.removeAttribute('first-para')
+    secondPara.removeAttribute('second-para')
+    firstPara.setAttribute('id', 'first-para-visible')
+    secondPara.setAttribute('id', 'second-para-visible')
+  })
+}
+
+about.addEventListener("click", function scroll() {
+  document.querySelector('#scroll-to').scrollIntoView({ behavior: 'smooth' })
 })
 
-const paraLink = document.querySelector('.animate-me')
-
-paraLink.addEventListener("click", () => {
-  document.querySelector('#foot').scrollIntoView({ behavior: 'smooth' })
-
+about.addEventListener("touchstart", () => {
+  document.querySelector('#scroll-to').scrollIntoView({ behavior: 'smooth' })
 })

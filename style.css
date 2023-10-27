@@ -87,15 +87,17 @@ header {
   visibility: visible;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   background-color: rgb(245 84 46 / 57%);
-  animation: rotate-scale-up 0.65s linear both;
-  scroll-behavior: smooth;
+  animation: rotate-scale-up-one 0.65s linear both;
+ 
 }
 
 #second-para-visible {
+  
   visibility: visible;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
   background-color: rgb(47 197 159 / 65%);
-  animation: roll-in-right 1s ease-out both;
+  animation: rotate-scale-up-two 0.65s linear both;
+  
   animation-delay: 3.5s;
   
 }
@@ -113,7 +115,7 @@ header {
   
 }
 
-@keyframes rotate-scale-up {
+@keyframes rotate-scale-up-one {
   0% {
     transform: scale(1) rotateZ(0);
   }
@@ -121,6 +123,20 @@ header {
     transform: scale(1.2) rotateZ(180deg);
   }
   100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-scale-up-two {
+  0% {
+    opacity: 0;
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(1.2) rotateZ(180deg);
+  }
+  100% {
+    opacity: 1;
     transform: scale(1) rotateZ(360deg);
   }
 }
