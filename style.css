@@ -33,12 +33,87 @@ header {
   background-position: center;
 }
 
+#portfolio {
+  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+#project-info {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project-info p {
+  font-size: 2rem;
+  font-family: Oswald;
+}
+
+#project-info a {
+  color: rgb(201, 94, 94);
+ 
+}
+
+#project-info span {
+  color: rgb(58, 90, 117);
+}
+
+#project-info a:hover {
+  
+   color: rgb(81, 121, 153);
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: white 
+}
+
+
+
+.project img {
+  border: solid 2px #5d7b89
+}
+
+h4 {
+  font-size: 2rem;
+  font-family: Oswald;
+  color: rgb(64, 114, 136);
+  
+}
+
+h3 {
+  font-size: 4rem;
+  font-family: 'Pacifico';
+  font-weight: 200;
+  color: rgb(51, 94, 113);
+}
+
+.portfolio-container {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 footer {
   z-index: 1;
   min-height: 10vh;
+  flex: 1;
   background-color: rgb(51, 94, 113);
   background-image: url(images/dots.jpg);
-    background-position: center;
+  background-position: center;
 }
 
 .about-me {
@@ -176,6 +251,7 @@ footer {
 }
 
 h2 {
+  box-sizing: border-box;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -188,6 +264,8 @@ h2 {
   background-color: rgb(49 110 137 / 84%);
   padding-top: 30px;
   padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;;
   filter: drop-shadow(10px 10px rgb(201, 185, 188));
   /* background-image: url('images/dots.jpg');
   background-position: center; */
@@ -222,10 +300,7 @@ li {
   border-right: 0.1rem solid white; 
 }
 
-a:link, a:visited {
-  text-decoration: none;
-  color: white
-}
+
 
 .not-active {
   pointer-events: none;
@@ -268,7 +343,7 @@ nav {
   flex: 1;
 }
 
-img {
+.main.img {
   object-fit: scale-down;
   object-position: center;
   /* width: 100%; */
@@ -323,15 +398,38 @@ h1 {
     padding-bottom: 25px;
   }
 
+  .portfolio-container {
+    gap: 50px;
+  }
+
+  #project-info {
+    display: block;
+  }
+
+  #project-info p {
+    font-size: 1.5rem;
+  }
+
+
   img {
     object-fit: contain;
     width: 100%;
+  }
+
+  .project img {
+    max-width: 300px;
+    object-fit: scale-down;
   }
 
   h2 {
     font-size: 2rem;
     background-size: contain;
     padding: 25px;
+    box-sizing: content-box;
+  }
+
+  h3 {
+    text-align: center;
   }
 
   .about-me p {
