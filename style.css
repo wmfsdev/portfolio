@@ -12,8 +12,8 @@
 }
 
 body {
-  background-color: rgb(104, 89, 89);
-  min-height: 100vh;
+  background-color: rgb(233, 233, 233);
+  min-height: 100%;
   overflow-x:hidden;
   display: flex;
   flex-direction: column;
@@ -35,17 +35,51 @@ header {
 
 #portfolio {
   padding: 40px;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 60px;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#contact {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  background-color: rgb(245, 245, 247);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-icons {
+  fill: rgb(49, 107, 143);
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.github-icon {
+  height: 115px;
+  width: 115px;
+}
+
+.linkedin-icon {
+  height: 275px;
+  width: 275px;
+}
+
+.email-icon {
+  height: 115px;
+  width: 115px;
 }
 
 .project {
   display: flex;
   flex-direction: column;
- 
 }
 
 #project-info {
@@ -79,8 +113,6 @@ a:link, a:visited {
   color: white 
 }
 
-
-
 .project img {
   border: solid 2px #5d7b89
 }
@@ -93,19 +125,22 @@ h4 {
 }
 
 h3 {
-  font-size: 4rem;
-  font-family: 'Pacifico';
+  font-size: 5rem;
+  font-family: 'Oswald';
+  font-weight: 1000;
   font-weight: 200;
   color: rgb(51, 94, 113);
 }
 
 .portfolio-container {
   display: flex;
-  margin-top: 20px;
+  margin-top: 60px;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
 }
+
+
 
 footer {
   z-index: 1;
@@ -166,21 +201,20 @@ footer {
 .para-container {
   display: flex;
   gap: 30px;
-  
 }
   
 #first-para-visible {
   z-index: 1;
   display: block;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
-  background-color: rgb(245 84 46 / 57%);
+  background-color: rgb(196, 116, 122);
   animation: rotate-scale-up-one 0.85s linear both;
 }
 
 #second-para-visible {
   display: block;
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
-  background-color: rgb(47 197 159 / 65%);
+  background-color: rgb(235, 190, 155);
   animation: roll-in-blurred-left 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   animation-delay: 3.5s;
 }
@@ -261,12 +295,12 @@ h2 {
   font-size: 3rem;
   text-align: center;
   border-radius: 10px;
-  background-color: rgb(49 110 137 / 84%);
+  background-color: rgb(57, 120, 148);
   padding-top: 30px;
   padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;;
-  filter: drop-shadow(10px 10px rgb(201, 185, 188));
+  filter: drop-shadow(5px 5px rgb(186, 196, 197));
   /* background-image: url('images/dots.jpg');
   background-position: center; */
 }
@@ -299,8 +333,6 @@ li {
   padding-right: 50px;
   border-right: 0.1rem solid white; 
 }
-
-
 
 .not-active {
   pointer-events: none;
@@ -392,7 +424,6 @@ h1 {
   }
 
   .about-me {
-    
     padding-left: 15%;
     padding-right: 15%;
     padding-bottom: 25px;
@@ -400,6 +431,21 @@ h1 {
 
   .portfolio-container {
     gap: 50px;
+    margin-top: 50px;
+  }
+
+  #contact {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-icons {
+    transform: scale(0.8);
+  }
+
+  .contact-icons {
+    flex-direction: column;
+    gap: 10px;
   }
 
   #project-info {
@@ -430,6 +476,8 @@ h1 {
 
   h3 {
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .about-me p {
@@ -442,9 +490,7 @@ h1 {
     flex-direction: column;
     gap: 25px;
     align-items: center;
-    
   }
-
 
   nav {
     margin-left: 20px;

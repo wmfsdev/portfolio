@@ -15,7 +15,7 @@ menuIcon.addEventListener("touchstart", () => {
     }, 300);
 })
 
-
+// const portfolio = document.querySelector('')
 const about = document.querySelector('.animate-me')
 
 if (window.screen.width < 420) {
