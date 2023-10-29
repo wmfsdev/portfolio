@@ -59,12 +59,14 @@ header {
   fill: rgb(49, 107, 143);
   display: flex;
   align-items: center;
+  transform: scale(0.8);
   gap: 80px;
 }
 
 .contact-icons >svg:hover {
   fill: rgb(108, 181, 181);
-  transform: scale(1.1)
+  transform: scale(1.1);
+  cursor:pointer;
 }
 
 .github-icon {
@@ -351,7 +353,7 @@ li:nth-child(1) {
   border-top-right-radius: 5px;
 }
 
-li:nth-child(4)  {
+li:nth-child(3)  {
   padding-bottom: 60px;
   border-bottom: 0.05rem solid white;
   border-bottom-left-radius: 5px;
@@ -444,8 +446,18 @@ h1 {
   .contact-icons {
     flex-direction: column;
     gap: 60px;
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
+
+  .github-icon {
+    transform: scale(1.1);
+  }
+
+
+  /* srcset="images/desk-1184.png 1400w, images/desk-900.png 900w, images/desk-400.png 399w"
+  sizes="(max-width: 900px) 400px, 900px,
+        1400px"
+  src="./desk-1184.png" */
 
   #project-info {
     display: block;
