@@ -36,7 +36,7 @@ header {
 #portfolio {
   padding: 40px;
   padding-top: 50px;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -62,19 +62,24 @@ header {
   gap: 80px;
 }
 
+.contact-icons >svg:hover {
+  fill: rgb(108, 181, 181);
+  transform: scale(1.1)
+}
+
 .github-icon {
   height: 115px;
   width: 115px;
 }
 
 .linkedin-icon {
-  height: 275px;
-  width: 275px;
+  height: 110px;
+  width: 110px;
 }
 
 .email-icon {
-  height: 115px;
-  width: 115px;
+  height: 125px;
+  width: 125px;
 }
 
 .project {
@@ -120,8 +125,7 @@ a:link, a:visited {
 h4 {
   font-size: 2rem;
   font-family: Oswald;
-  color: rgb(64, 114, 136);
-  
+  color: rgb(64, 114, 136); 
 }
 
 h3 {
@@ -139,8 +143,6 @@ h3 {
   flex-wrap: wrap;
   gap: 50px;
 }
-
-
 
 footer {
   z-index: 1;
@@ -436,16 +438,13 @@ h1 {
 
   #contact {
     flex-direction: column;
-    gap: 20px;
-  }
-
-  .contact-icons {
-    transform: scale(0.8);
+    padding-bottom: 15px;
   }
 
   .contact-icons {
     flex-direction: column;
-    gap: 10px;
+    gap: 60px;
+    transform: scale(0.8);
   }
 
   #project-info {
