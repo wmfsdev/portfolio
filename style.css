@@ -1,14 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 
 
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box;   */
 }
 
 body {
@@ -63,10 +61,13 @@ header {
   gap: 80px;
 }
 
-.contact-icons >svg:hover {
-  fill: rgb(108, 181, 181);
+.contact-icons a {
+  fill: rgb(49, 107, 143);
+}
+
+.contact-icons a:hover {
+  fill: rgb(109, 160, 162);
   transform: scale(1.1);
-  cursor:pointer;
 }
 
 .github-icon {
@@ -103,7 +104,6 @@ header {
 
 #project-info a {
   color: rgb(201, 94, 94);
- 
 }
 
 #project-info span {
@@ -185,23 +185,6 @@ footer {
   color: rgb(241, 239, 91);
 }
 
-
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 0.13em;
-    opacity: 0.8;
-    
-  }
-  40% {
-    opacity: 0.9;
-  }
-  100% {
-    letter-spacing: 0.08em;
-    opacity: 1;
-    
-  }
-}
-
 .para-container {
   display: flex;
   gap: 30px;
@@ -233,59 +216,10 @@ footer {
   filter: drop-shadow(5px 5px rgb(203, 199, 201));
 }
 
-@keyframes rotate-scale-up-one {
-  0% {
-    opacity: 0;
-    transform: scale(1) rotateZ(0);
-  }
-  50% {
-    transform: scale(1.2) rotateZ(180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotateZ(360deg);
-  }
-}
-
-@keyframes roll-in-blurred-left {
-  0% {
-    transform: translateX(1000px) rotate(-720deg) scale(0.7);
-    filter: blur(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg) scale(1);
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
-@keyframes roll-in-right {
-  0% {
-    transform: translateX(800px) rotate(540deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
 .work {
   z-index: 1;
   height: 500px;
   background-color: cadetblue;
-}
-
-
-@keyframes shape {
-  0% {
-    opacity: 0
-  }
-
-  100% {
-    opacity: 1
-  }
 }
 
 h2 {
@@ -305,8 +239,6 @@ h2 {
   padding-left: 40px;
   padding-right: 40px;;
   filter: drop-shadow(5px 5px rgb(186, 196, 197));
-  /* background-image: url('images/dots.jpg');
-  background-position: center; */
 }
 
 ul {
@@ -382,7 +314,6 @@ nav {
 .main.img {
   object-fit: scale-down;
   object-position: center;
-  /* width: 100%; */
   height: 100%;
   display: flex;
 }
@@ -453,12 +384,6 @@ h1 {
     transform: scale(1.1);
   }
 
-
-  /* srcset="images/desk-1184.png 1400w, images/desk-900.png 900w, images/desk-400.png 399w"
-  sizes="(max-width: 900px) 400px, 900px,
-        1400px"
-  src="./desk-1184.png" */
-
   #project-info {
     display: block;
   }
@@ -519,7 +444,59 @@ h1 {
   }
 }
 
+@keyframes roll-in-right {
+  0% {
+    transform: translateX(800px) rotate(540deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
 
+@keyframes rotate-scale-up-one {
+  0% {
+    opacity: 0;
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(1.2) rotateZ(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+@keyframes roll-in-blurred-left {
+  0% {
+    transform: translateX(1000px) rotate(-720deg) scale(0.7);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg) scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 0.13em;
+    opacity: 0.8;
+    
+  }
+  40% {
+    opacity: 0.9;
+  }
+  100% {
+    letter-spacing: 0.08em;
+    opacity: 1;
+    
+  }
+}
 
 @keyframes shake {
   0%,
@@ -567,7 +544,6 @@ h1 {
     opacity: 1
   }
 }
-
 
 @keyframes open-menu { 
   0% {
